@@ -6,9 +6,9 @@ const competencies = [
   { icon: Code2, label: "Laravel Development" },
   { icon: Plug, label: "REST APIs" },
   { icon: Layers, label: "Multi-tenant SaaS" },
-  { icon: Globe, label: "3rd-party Integrations" },
-  { icon: Rocket, label: "Full Stack Delivery" },
-  { icon: Database, label: "React.js Frontends" },
+  { icon: Globe, label: "Third-party Integrations" },
+  { icon: Rocket, label: "Full Stack Development" },
+  { icon: Database, label: "Database Optimization" },
 ];
 
 export function About() {
@@ -18,19 +18,18 @@ export function About() {
       eyebrow="About"
       title={<>Engineering <span className="text-gradient-cyan">production-grade</span> backends.</>}
     >
-      <div className="grid lg:grid-cols-[1.3fr_1fr] gap-8">
-        <div className="glass rounded-2xl p-8 relative noise overflow-hidden">
+      <div className="grid md:grid-cols-2 lg:grid-cols-[1.3fr_1fr] gap-6 md:gap-8">
+        <div className="glass rounded-2xl p-6 sm:p-8 relative noise overflow-hidden">
           <p className="text-foreground/90 leading-relaxed">
             Laravel Full Stack Developer with 3+ years of experience building scalable
             enterprise applications, multi-tenant SaaS platforms, REST APIs, and
-            e-commerce solutions. I currently develop and maintain a large-scale
-            commercial property management system using{" "}
-            <span className="text-primary">Laravel, CodeIgniter, React.js and MySQL</span>.
+            e-commerce solutions. I develop and maintain large-scale commercial
+            property management systems using <span className="text-primary">Laravel, CodeIgniter, React.js, and MySQL</span>.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            I'm skilled in backend architecture, third-party API integrations, database
-            optimization and collaborating with international teams using Agile workflows
-            and modern development tools.
+            Skilled in backend architecture, third-party API integrations, database
+            optimization, authentication, and collaborating with international teams
+            through Agile workflows and modern engineering tools.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {["Agile", "Multi-tenant", "Performance", "API-first", "Clean code"].map((t) => (
@@ -43,7 +42,7 @@ export function About() {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {competencies.map((c, i) => (
             <motion.div
               key={c.label}

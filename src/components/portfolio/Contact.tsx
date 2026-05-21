@@ -1,6 +1,6 @@
 import { Section } from "./Section";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Globe, Linkedin, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { z } from "zod";
 
@@ -36,13 +36,19 @@ export function Contact() {
       title={<>Let's build something <span className="text-gradient-cyan">great</span>.</>}
       description="Open to full-time roles, freelance and collaborations on SaaS / API platforms."
     >
-      <div className="grid lg:grid-cols-[1fr_1.2fr] gap-6">
-        <div className="space-y-3">
+      <div className="grid md:grid-cols-2 lg:grid-cols-[1fr_1.2fr] gap-4 md:gap-6">
+        <div className="space-y-3 order-2 md:order-1">
           <ContactLink
             href="mailto:abishekabiharidad@gmail.com"
             icon={Mail}
             label="Email"
             value="abishekabiharidad@gmail.com"
+          />
+          <ContactLink
+            href="tel:+918086163947"
+            icon={Mail}
+            label="Phone"
+            value="+91 8086163947"
           />
           <ContactLink
             href="https://linkedin.com/in/abishek-m-h-283201200"
@@ -56,9 +62,15 @@ export function Contact() {
             label="GitHub"
             value="abhiraru"
           />
+          <ContactLink
+            href="https://www.google.com/maps/search/Kochi+India"
+            icon={Globe}
+            label="Location"
+            value="Kochi, India"
+          />
         </div>
 
-        <form onSubmit={onSubmit} className="glass-strong rounded-2xl p-6 space-y-4">
+        <form onSubmit={onSubmit} className="glass-strong rounded-2xl p-4 sm:p-6 space-y-4 order-1 md:order-2">
           <Field
             label="Name"
             value={form.name}

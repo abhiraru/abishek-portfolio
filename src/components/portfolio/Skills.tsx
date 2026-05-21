@@ -18,7 +18,7 @@ export function Skills() {
       title={<>A complete <span className="text-gradient-cyan">full-stack</span> toolkit.</>}
       description="Languages, frameworks and integrations I use to ship production software."
     >
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         {groups.map((g, gi) => (
           <motion.div
             key={g.title}
@@ -26,7 +26,7 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: gi * 0.05 }}
-            className="glass rounded-2xl p-6 hover:border-primary/40 transition"
+            className="glass rounded-2xl p-4 sm:p-6 hover:border-primary/40 transition"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-display font-semibold">{g.title}</h3>

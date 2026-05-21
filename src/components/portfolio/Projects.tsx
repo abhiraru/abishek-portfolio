@@ -15,19 +15,33 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Commercial Property Management Platform",
+    tag: "Enterprise · SaaS",
+    description:
+      "Enterprise-grade commercial real estate operations platform built for multi-tenant SaaS workflows and portfolio management.",
+    features: [
+      "Dynamic tenant-based database switching",
+      "REST API-driven backend modules",
+      "Payment gateway and HubSpot CRM integrations",
+      "Twilio messaging workflows",
+      "React.js operational dashboards",
+    ],
+    stack: ["Laravel", "CodeIgniter", "React.js", "PHP", "MySQL"],
+    github: "https://github.com/abhiraru",
+    accent: "from-violet-400/30 to-fuchsia-500/10",
+  },
+  {
     title: "HireSphere Backend",
     tag: "API · AI",
     description:
-      "Modular Laravel backend API for an AI-powered recruitment platform — recruiter workflows, candidate profiles, applications and OpenAI-powered skill matching.",
+      "Modular Laravel backend API for an AI-powered recruitment platform with job workflows, candidate profiles, and OpenAI skill matching.",
     features: [
       "Laravel Sanctum authentication",
       "AI-powered skill matching",
-      "Resume upload & application management",
-      "Paginated & filterable APIs",
-      "OpenAI API integration",
-      "PHPUnit testing",
+      "Resume upload and application management",
+      "Paginated & filterable job APIs",
     ],
-    stack: ["Laravel 13", "PHP 8", "MySQL", "Sanctum", "OpenAI", "PHPUnit"],
+    stack: ["Laravel 13", "PHP 8", "MySQL", "Sanctum", "OpenAI"],
     github: "https://github.com/abhiraru/HireSphere_Backend",
     accent: "from-primary/30 to-accent/10",
   },
@@ -35,14 +49,14 @@ const projects: Project[] = [
     title: "HireSphere Frontend",
     tag: "Web App",
     description:
-      "Modern React frontend for an AI recruitment platform with recruiter dashboards and candidate workflows.",
+      "React frontend for an AI recruitment experience with dashboards, search, filtering and resume management.",
     features: [
-      "Job search & filtering",
-      "Resume upload",
-      "Recruiter dashboards",
-      "Responsive reusable UI components",
+      "Candidate and recruiter dashboards",
+      "Job search, filtering, pagination",
+      "Resume upload and profile management",
+      "Reusable responsive UI components",
     ],
-    stack: ["React", "TypeScript", "Tailwind", "Vite", "React Query"],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Vite", "React Query"],
     github: "https://github.com/abhiraru/HireSphere_Frontend",
     accent: "from-cyan-400/30 to-sky-500/10",
   },
@@ -50,7 +64,7 @@ const projects: Project[] = [
     title: "Ninja Bird",
     tag: "Game",
     description:
-      "Responsive arcade-style browser game with progressive difficulty mechanics and real-time gameplay.",
+      "Responsive arcade-style browser game with progressive difficulty and interactive gameplay.",
     stack: ["React", "Vite", "JavaScript", "CSS"],
     github: "https://github.com/abhiraru/Ninjabird",
     accent: "from-emerald-400/30 to-teal-500/10",
@@ -65,7 +79,7 @@ export function Projects() {
       title={<>Selected <span className="text-gradient-cyan">work</span> & side bets.</>}
       description="A mix of production engineering and personal builds — open source on GitHub."
     >
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
         {projects.map((p, i) => (
           <ProjectCard key={p.title} p={p} delay={i * 0.08} />
         ))}
